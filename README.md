@@ -4,13 +4,7 @@ An app which plans out what the user will do for the week and following days. Un
 *Weekly planner that allows easy access and organization. Helps time manage. Convenience. Can include time slots, notifications, multiple inputs per day.*
 
 
-# ACTION PLAN
-1.) To allow students, mainly highschoolers, to be able to time manage more conveniently and with ease weekly through the use of and app.
-2.) Graphics, Elements, Roles, Timeline
-    a.)
-    b.)
-    c.)
-    d.)
-        i.) (last day of school0
-        ii.) (essential order)
-3.) Our service is direct.
+# Dev Diary 
+## May 14, 2019
+	Our plan is to create a minimalistic program which focuses on convenience and organization. It is a notepad with an easy-to-understand interface, and catered towards students. Of course, we hope to incorporate ways to encourage teachers and staff to use it, but we aren’t sure whether we will be able to implement those sort of things with the given time limit. 
+
