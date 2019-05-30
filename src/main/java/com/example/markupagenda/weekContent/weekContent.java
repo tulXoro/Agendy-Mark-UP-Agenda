@@ -10,7 +10,8 @@ public class weekContent {
     public static final List<dayItem> ITEMS = new ArrayList<dayItem>();
 
     /**
-     * A map of sample (dummy) items, by ID.
+     * A map of sample items, by ID.
+     * Note* I probably modified the id/date thing... try to sort that out future Tim =D
      */
     public static final Map<String, dayItem> ITEM_MAP = new HashMap<String, dayItem>();
 
@@ -68,12 +69,13 @@ public class weekContent {
     }
 
     /**
-     * A dummy item representing a piece of content.
+     * week day specifications when initialized!
+     * This is going to be an important part you'll need to change
      */
     public static class dayItem {
-        public final String id;
-        public final String content;
-        public final String details;
+        public final String id;//Change to date later!!!
+        public final String content;//day name
+        public final String details;//details about the day
 
         public dayItem(String id, String content, String details) {
             this.id = id;
