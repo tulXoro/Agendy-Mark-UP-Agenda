@@ -1,11 +1,14 @@
 package com.example.markupagenda.weekContent;
 
+import android.content.res.Resources;
+import android.support.v7.app.AppCompatActivity;
+import com.example.markupagenda.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class weekContent {
+public class weekContent extends AppCompatActivity{
 
     public static final List<dayItem> ITEMS = new ArrayList<dayItem>();
 
@@ -31,7 +34,8 @@ public class weekContent {
 
     //helper method to return day... Maybe implement dynamic?
     private static String custDay(int position){
-        /*
+
+
         switch(position) {
             case 1:
                 return "Sunday";
@@ -49,13 +53,12 @@ public class weekContent {
                 return "Saturday";
             default: return "Error, you should not see this";
 
-        }*/
-        String[] weekdaysName = getResources().getStringArray(R.array.weekdays));
-        return weekdaysName(position-1);
+        }
+
     }
 
-    private static dayItem createDay(int date) {
-        return new dayItem(String.valueOf(date), custDay(date), makeDetails());
+    private static dayItem createDay(int position) {
+        return new dayItem(String.valueOf(position), custDay(position), makeDetails());
     }
 
     private static String makeDetails() {

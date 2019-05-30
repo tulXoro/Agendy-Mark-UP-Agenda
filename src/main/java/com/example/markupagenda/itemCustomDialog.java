@@ -46,7 +46,7 @@ public class itemCustomDialog extends DialogFragment{
                         .setAction("Action", null).show();
                 String input = mInput.getText().toString();
 
-                //FIXME
+                //FIXMe
                 mOnInputListener.sendInput(input);
                 getDialog().dismiss();
 

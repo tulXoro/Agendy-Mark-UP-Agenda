@@ -2,14 +2,4 @@
     <string name="app_name">Agendy: Mark Up Agenda</string>
     <string name="title_item_detail">Item Detail</string>
     
-    <string-array name="weekdays">
-        <item>Sunday</item>
-        <item>Monday</item>
-        <item>Tuesday</item>
-        <item>Wednesday</item>
-        <item>Thursday</item>
-        <item>Friday</item>
-        <item>Saturday</item>
-    </string-array>
-    
 </resources>
