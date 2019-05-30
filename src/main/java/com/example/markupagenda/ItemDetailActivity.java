@@ -9,6 +9,8 @@ import android.view.View;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBar;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * An activity representing a single Item detail screen. This
@@ -17,6 +19,13 @@ import android.view.MenuItem;
  * in a {@link ItemListActivity}.
  */
 public class ItemDetailActivity extends AppCompatActivity {
+
+    //widgets
+    private Button mOpenDialog;
+    public TextView mInputDisplay;
+
+    //vars
+    public String mInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +40,14 @@ public class ItemDetailActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own detail action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                itemCustomDialog dialog = new itemCustomDialog();
+                dialog.show(getSupportFragmentManager(), "Cu");
             }
         });
+
+        //CUSTOM
+        mInputDisplay = findViewById(R.id.input);
+        //END CUSTOM
 
         // Show the Up button in the action bar.
         ActionBar actionBar = getSupportActionBar();

@@ -1,44 +1,29 @@
-package com.example.markupagenda.dummy;
+package com.example.markupagenda.weekContent;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Helper class for providing sample content for user interfaces created by
- * Android template wizards.
- * <p>
- * TODO: Replace all uses of this class before publishing your app.
- */
+public class weekContent {
 
-/**
- * ^^^^ How about no? I am not going to rewrite all this sh**** unless we run out of time
- * you can thank me later
- * -Past Tim
- */
-public class DummyContent {
-
-    /**
-     * An array of sample (dummy) items.
-     */
-    public static final List<DummyItem> ITEMS = new ArrayList<DummyItem>();
+    public static final List<dayItem> ITEMS = new ArrayList<dayItem>();
 
     /**
      * A map of sample (dummy) items, by ID.
      */
-    public static final Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
+    public static final Map<String, dayItem> ITEM_MAP = new HashMap<String, dayItem>();
 
     private static final int COUNT = 7;
 
     static {
         // Add some sample items.
         for (int i = 1; i <= COUNT; i++) {
-            addItem(createDummyItem(i));
+            addItem(createDay(i));
         }
     }
 
-    private static void addItem(DummyItem item) {
+    private static void addItem(dayItem item) {
         ITEMS.add(item);
         ITEM_MAP.put(item.id, item);
     }
@@ -60,16 +45,16 @@ public class DummyContent {
                 return "Friday";
             case 7:
                 return "Saturday";
-                default: return "Error, you should not see this";
+            default: return "Error, you should not see this";
 
         }
     }
 
-    private static DummyItem createDummyItem(int position) {
-        return new DummyItem(String.valueOf(position), "" + custDay(position), makeDetails(position));
+    private static dayItem createDay(int date) {
+        return new dayItem(String.valueOf(date), custDay(date), makeDetails());
     }
 
-    private static String makeDetails(int position) {
+    private static String makeDetails() {
         StringBuilder builder = new StringBuilder();
         /*
          * TODO: insert different text depending on day..
@@ -82,12 +67,12 @@ public class DummyContent {
     /**
      * A dummy item representing a piece of content.
      */
-    public static class DummyItem {
+    public static class dayItem {
         public final String id;
         public final String content;
         public final String details;
 
-        public DummyItem(String id, String content, String details) {
+        public dayItem(String id, String content, String details) {
             this.id = id;
             this.content = content;
             this.details = details;
