@@ -30,6 +30,7 @@ public class weekContent {
 
     //helper method to return day... Maybe implement dynamic?
     private static String custDay(int position){
+        /*
         switch(position) {
             case 1:
                 return "Sunday";
@@ -47,7 +48,9 @@ public class weekContent {
                 return "Saturday";
             default: return "Error, you should not see this";
 
-        }
+        }*/
+        String[] weekdaysName = getResources().getStringArray(R.array.weekdays));
+        return weekdaysName(position-1);
     }
 
     private static dayItem createDay(int date) {
