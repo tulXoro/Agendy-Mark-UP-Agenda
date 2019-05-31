@@ -52,7 +52,6 @@ public class weekContent extends AppCompatActivity{
             case 7:
                 return "Saturday";
             default: return "Error, you should not see this";
-
         }
 
     }

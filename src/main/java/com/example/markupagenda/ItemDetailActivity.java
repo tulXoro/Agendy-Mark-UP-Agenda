@@ -1,10 +1,12 @@
 package com.example.markupagenda;
 
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBar;
@@ -20,12 +22,6 @@ import android.widget.TextView;
  */
 public class ItemDetailActivity extends AppCompatActivity {
 
-    //widgets
-    private Button mOpenDialog;
-    public TextView mInputDisplay;
-
-    //vars
-    public String mInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,16 +34,10 @@ public class ItemDetailActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own detail action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
                 itemCustomDialog dialog = new itemCustomDialog();
                 dialog.show(getSupportFragmentManager(), "Cu");
             }
         });
-
-        //CUSTOM
-        mInputDisplay = findViewById(R.id.input);
-        //END CUSTOM
 
         // Show the Up button in the action bar.
         ActionBar actionBar = getSupportActionBar();

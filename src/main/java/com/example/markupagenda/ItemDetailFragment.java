@@ -21,6 +21,8 @@ import static android.content.ContentValues.TAG;
  * This fragment is either contained in a {@link ItemListActivity}
  * in two-pane mode (on tablets) or a {@link ItemDetailActivity}
  * on handsets.
+ *
+ * MODIFY THIS CLASS TO ADD USER INput
  */
 public class ItemDetailFragment extends Fragment implements itemCustomDialog.OnInputListener{
     /**
@@ -43,7 +45,7 @@ public class ItemDetailFragment extends Fragment implements itemCustomDialog.OnI
 
     @Override
     public void sendInput(String input) {
-
+        //test
     }
 
     @Override
@@ -71,7 +73,7 @@ public class ItemDetailFragment extends Fragment implements itemCustomDialog.OnI
 
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.item_detail)).setText(mItem.details);
+            ((TextView) rootView.findViewById(R.id.item_detail)).setText("testing");
         }
 
         return rootView;

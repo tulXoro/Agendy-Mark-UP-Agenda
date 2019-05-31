@@ -41,9 +41,6 @@ public class itemCustomDialog extends DialogFragment{
         mActionOk.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v){
-
-                Snackbar.make(v, "Understood.", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
                 String input = mInput.getText().toString();
 
                 //FIXMe
