@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".ItemListActivity"
-    android:background="@drawable/background"
+    android:background="@drawable/jade_background"
     >
 
     <android.support.design.widget.AppBarLayout
