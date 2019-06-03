@@ -24,7 +24,7 @@ import static android.content.ContentValues.TAG;
  *
  * MODIFY THIS CLASS TO ADD USER INput
  */
-public class ItemDetailFragment extends Fragment implements itemCustomDialog.OnInputListener{
+public class ItemDetailFragment extends Fragment{
     /**
      * The fragment argument representing the item ID that this fragment
      * represents.
@@ -41,11 +41,6 @@ public class ItemDetailFragment extends Fragment implements itemCustomDialog.OnI
      * fragment (e.g. upon screen orientation changes).
      */
     public ItemDetailFragment() {
-    }
-
-    @Override
-    public void sendInput(String input) {
-        //test
     }
 
     @Override
