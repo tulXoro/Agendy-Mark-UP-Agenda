@@ -24,8 +24,10 @@ public class ItemDetailActivity extends AppCompatActivity implements itemCustomD
 
     @Override
     public void sendInput(String input) {
+        fragment.changeIn(input);
+    }
 
-    };
+    private ItemDetailFragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,13 +60,14 @@ public class ItemDetailActivity extends AppCompatActivity implements itemCustomD
         //
         // http://developer.android.com/guide/components/fragments.html
         //
+
         if (savedInstanceState == null) {
             // Create the detail fragment and add it to the activity
             // using a fragment transaction.
             Bundle arguments = new Bundle();
             arguments.putString(ItemDetailFragment.ARG_ITEM_ID,
                     getIntent().getStringExtra(ItemDetailFragment.ARG_ITEM_ID));
-            ItemDetailFragment fragment = new ItemDetailFragment();
+            fragment = new ItemDetailFragment();
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.item_detail_container, fragment)

@@ -19,6 +19,7 @@ public class itemCustomDialog extends DialogFragment{
     public interface OnInputListener{
         void sendInput(String input);
     }
+
     public OnInputListener mOnInputListener;
 
     //widgets

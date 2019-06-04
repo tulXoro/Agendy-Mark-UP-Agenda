@@ -29,6 +29,9 @@ public class ItemDetailFragment extends Fragment{
      * The fragment argument representing the item ID that this fragment
      * represents.
      */
+    //I don't know how this works and I want to fix it but whatever
+    private View rootView;
+
     public static final String ARG_ITEM_ID = "item_id";
 
     /**
@@ -64,14 +67,18 @@ public class ItemDetailFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.item_detail, container, false);
+        rootView = inflater.inflate(R.layout.item_detail, container, false);
 
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.item_detail)).setText("testing");
+            ((TextView) rootView.findViewById(R.id.item_detail)).setText(mItem.details);
         }
 
         return rootView;
+    }
+
+    public void changeIn(String str){
+        ((TextView) rootView.findViewById(R.id.item_detail)).setText(str);
     }
 
 
