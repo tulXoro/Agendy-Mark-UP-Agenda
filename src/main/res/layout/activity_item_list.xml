@@ -2,11 +2,15 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity = "fill"
+    android:scaleType="fitXY"
+    android:layout_centerInParent="true"
+    android:adjustViewBounds="true"
     android:fitsSystemWindows="true"
     tools:context=".ItemListActivity"
-    android:background="@drawable/jade_background"
+    android:background="@drawable/p_background"
     >
 
     <android.support.design.widget.AppBarLayout
